@@ -1,0 +1,37 @@
+#include <string>
+
+using namespace std;
+
+class Credit_Card
+{
+public:
+	Credit_Card();
+	Credit_Card(int a);
+	double getCredit_Limit();
+	double getBalance_Due();
+	int getAcc_No();
+	double Avail_Cred();
+	int Credit_Inc();
+	void Transaction1();
+	int Cred_Inc();
+	bool add_charge(double charge_amount, const std::string& description);
+	
+
+	~Credit_Card();
+
+private:
+	int Ano;
+	bool vErr;
+	string vE_Msg;
+	double vC_Limit;
+	double vBal_due;
+	void write_status();
+	void write_log(string m);
+	string CCName, CCLName;
+	double vBal_own = vC_Limit;
+	double payment;
+	double charge;
+
+
+
+};
